@@ -38,12 +38,12 @@ st.write("---")
 # =========================
 # 2. 환경변수 로드 및 확인
 # =========================
-load_dotenv()
-api_key = os.getenv('OPENAI_API_KEY')
+# load_dotenv()
+# api_key = os.getenv('OPENAI_API_KEY')
 
-if not api_key: # 예외처리
-    st.error("⚠️ OPENAI_API_KEY가 설정되지 않았습니다. .env 파일을 확인하세요.")
-    st.stop()
+# if not api_key: # 예외처리
+#     st.error("⚠️ OPENAI_API_KEY가 설정되지 않았습니다. .env 파일을 확인하세요.")
+#     st.stop()
 
 # =========================
 # 3. 세션 상태 초기화
@@ -307,3 +307,4 @@ if st.sidebar.checkbox("🔍 검색된 원본 문서 보기", value=False):
                 st.text(doc.page_content[:300] + "...")
                 st.markdown(f"**메타데이터:**")
                 st.json(doc.metadata)
+
